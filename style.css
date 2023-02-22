@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+ /* background-image: url(./ImagenesPlanetas/Andromeda.jpg); */
+ font-family: 'Coming Soon', cursive;
+}
+
+html{
+    font-size: 60%;
+}
+
+.contenedor{
+display: flex;
+flex-direction: column;
+align-items:center ;
+color: whitesmoke;
+font:bold
+
+}
+.lista-planetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 16px;
+
+
+}
+
+.titulo{
+    background-color:aliceblue;
+    font-size: 2rem;
+    width: 12rem;
+    border-radius: 10px;
+    position: relative;
+    top: 30px;
+    color: rgba(210, 211, 186, 0.815);
+    font:bold
+}
+
+.titulo h2{
+    display: flex;
+    justify-content: center;
+    border: 1px solid aqua;
+    border-radius: 10px;
+}
+.planeta{
+height: 350px;
+width: 250px;
+font-size: 13px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding-bottom: 15px;
+margin: 1px;
+
+}
+
+.planeta p{
+    padding: 0px;
+    margin: 0px;
+}
+
+img{
+    width: 15rem;
+    height: 15rem;
+}
+
+#mercurio{
+    background-color:  #656466;
+    border-radius: 15px;
+    /* background-image: url(https://cdn.pixabay.com/photo/2016/02/28/02/27/mercury-1226433__340.jpg); */
+}
+
+#venus {
+    background-color: #793203;
+    border-radius: 15px;
+    background-image: url(https://estaticos.muyinteresante.es/uploads/images/gallery/5f1832375cafe83edae8ae38/venus0.jpg);
+}
+
+#tierra{
+    background-color: #0b1c4f;
+    border-radius: 15px;
+    background-image: url(https://i.blogs.es/6788de/imagen-detalle/1366_2000.jpg);
+}
+
+#marte{
+    background-color: #7e0c04;
+    border-radius: 15px;
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/09/12/02/mars-2051747__340.png);
+}
+
+#jupiter{
+    background-color: #d0c9c2;
+    border-radius: 15px;
+    background-image:url(https://i.blogs.es/573811/eclipse-jupiter/1366_2000.jpg);
+}
+
+#saturno{
+    background-color: #935f6e;
+    border-radius: 15px;
+    background-image: url(https://cdn.pixabay.com/photo/2012/11/28/10/54/planet-67672__340.jpg);
+}
+
+#urano{
+    background-color: #9cbfc5;
+    border-radius: 15px;
+    background-image: url(https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2014/09/01/140901154302_urano_planeta_624x351_spl.jpg);
+}
+
+#neptuno{
+    background-color: #395697;
+    border-radius: 15px;
+    background-image: url(https://dam.ngenespanol.com/wp-content/uploads/2021/09/neptuno-en-oposicion.jpg);
+}
+
+
+
+#mercurio-t{
+    background-color:  #574c63;
+    
+}
+
+#venus-t{
+    background-color: #774422;
+
+}
+
+#tierra-t{
+    background-color: #1d294e;
+    
+}
+
+#marte-t{
+    background-color: #802b25;
+ 
+}
+
+#jupiter-t{
+    background-color: #d0b79e;
+   
+}
+
+#saturno-t{
+    background-color: #953c55;
+    
+}
+
+#urano-t{
+    background-color: #66b6c4;
+
+}
+
+#neptuno-t{
+    Background-color: transparent;
+   
+}
