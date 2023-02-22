@@ -31,6 +31,15 @@ font:bold
 
 }
 
+#nombre{
+    text-transform: lowercase;
+}
+
+.btn{
+    margin-bottom: 15px;
+}
+
+
 .titulo{
     background-color:aliceblue;
     font-size: 2rem;
@@ -46,19 +55,23 @@ font:bold
     display: flex;
     justify-content: center;
     border: 1px solid aqua;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .planeta{
-height: 350px;
-width: 250px;
+height: 650px;
+width: 450px;
 font-size: 13px;
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: start;
 justify-content: space-between;
 padding-bottom: 15px;
 margin: 1px;
+padding: 10px;
+}
 
+.planeta img{
+    align-self: center;
 }
 
 .planeta p{
@@ -72,11 +85,11 @@ img{
 }
 
 #mercurio{
-    background-color:  #656466;
-    border-radius: 15px;
-    /* background-image: url(https://cdn.pixabay.com/photo/2016/02/28/02/27/mercury-1226433__340.jpg); */
+    background-color:  #321252;
+    border-radius: 10px;
+    /* background-image: url(https://cdn.pixabay.com/photo/2016/02/28/02/27/mercury-1226433__340.jpg);  */
 }
-
+/*
 #venus {
     background-color: #793203;
     border-radius: 15px;
@@ -160,3 +173,4 @@ img{
     Background-color: transparent;
    
 }
+*/

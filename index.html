@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <input type="text" id="nombre">
-    <button id="buscar_btn" onclick="buscar()"> Buscar</button>
-    <div id="resultado"></div>
-
+    
     <section class="lista-planetas">
         <div class="contenedor">
+            <input type="text" id="nombre">
+    <button id="buscar_btn" class="btn" onclick="buscar()"> Buscar</button>
+    <div id="resultado" cla></div>
         <div class="titulos" id="mercurio">
-            <h2>Mercurio</h2>
+            
+            <h2 class="name"></h2>
         </div>
         
-        <div class="planeta" id="mercurio">
-            <img src="" alt="Imagen del planeta mercurio" class="pic">
+        <div class="planeta" id="mercurio">    
+            <img src="" alt="" class="pic">
+            <audio src="" class="sonido" autoplay></audio>
                 <p><b>Nombre:</b> <span class="name"></span></p>
                 <p><b>Raza: </b><span class="race"></span></p>
                 <p><b>Genero: </b><span class="gender"></span></p>
