@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="db.js"></script>
+</head>
+<body>
+    <main class="container">
+        <nav class="search_container">
+            <div class="contenedorBusqueda">
+                <p>Busca tu personaje AQUI!</p>
+                <input type="text" id="nombre">
+                <button id="buscar_btn" class="btn" onclick="buscar(),aparecer()"> Buscar</button>
+                <div id="resultado"></div>
+            </div>
+        </nav>
+
+        <section class="info_container">
+            <div class="personaje_db" id="boxPrincipal">  
+                <div class="imagen_personaje"> 
+                    <img src="" alt="" class="pic">
+                    <audio src="" class="sonido" autoplay></audio>
+                </div> 
+                <div class="info_general">
+                    <p><b>Nombre:</b> <span class="name"></span></p>
+                    <p><b>Raza: </b><span class="race"></span></p>
+                    <p><b>Genero: </b><span class="gender"></span></p>
+                    <p><b>Biografia: </b><span class="bio"></span></p>
+                    <p><b>Salud: </b><span class="health"></span></p>
+                    <p><b>Ataque: </b><span class="attack"></span></p>
+                    <p><b>Defensa: </b><span class="defense"></span></p>
+                    <p><b>Recuperacion de Ki: </b><span class="restore"></span></p>
+                    <p><b>Habilidades: </b><span class="ability"></span></sp>
+                </div>        
+            </div>
+        </section>
+
+        <footer>
+                <p>aqui va algo</p>
+        </footer>
+       
+        </div>
+    </main>
+    <script src="index.js"></script>
+
+</body>
+</html>

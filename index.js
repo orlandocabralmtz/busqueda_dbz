@@ -4,12 +4,21 @@ let resultado = document.getElementById("resultado");
 let personajes_json = JSON.parse(file);   //{characters: [...]}
 //buscar_btn.addEventListener("click", buscar)
 
+// document.getElementById("mostrar-seccion").addEventListener("click", function() {
+// /document.getElementsByTagName("section")[0].style.display = "block";
+// });
+
+// buscar_btn.addEventListener("click", buscar);
+ function aparecer() {
+    document.getElementsByTagName("section")[0].style.display = "block";
+};
+
 function buscar(){
     //resultado.innerHTML = nombre.value;
     let personaje =     buscarPersonaje(nombre.value);   
     if (personaje != null){   
     document.querySelectorAll(".name",)[0].innerHTML = `${personaje.name}`;
-    document.querySelectorAll(".name",)[1].innerHTML = `${personaje.name}`;
+    // document.querySelectorAll(".name",)[1].innerHTML = `${personaje.name}`;
     document.querySelectorAll(".race")[0].innerHTML = `${personaje.race}`;
     document.querySelectorAll(".gender")[0].innerHTML = `${personaje.gender}`;
     document.querySelectorAll(".bio")[0].innerHTML = `${personaje.bio}`;
