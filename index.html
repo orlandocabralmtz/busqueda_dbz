@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dragon Ball Z Wiki</title>
+    <link rel="stylesheet" href="style_prueba.css">
     <link rel="stylesheet" href="normalize.css">
     <script src="db.js"></script>
 </head>
 <body  class="container"> 
-
-        <nav class="search_container">
-            <div class="contenedorBusqueda">
-                <p>Busca tu personaje AQUI!</p>
-                <input type="text" id="nombre">
+        <nav class="contenedor_nav">
+            <div class="contenedorBusqueda">  
+                <input type="text" id="nombre" onkeypress="handle(event)" required>
+                <label class="texto">
+                    <span class="texto_busqueda">Busca tu personaje AQUI!</span>
+                </label>
+            </div>
+            <div class="container_btn">
                 <button id="buscar_btn" class="btn" onclick="buscar()"> Buscar</button>
-                <div id="resultado"></div>
             </div>
         </nav>
 
-        <section class="info_container">
+
+        <section class="info_container" id="miSection">
+
             <div class="personaje_db" id="boxPrincipal">  
                 <div class="imagen_personaje"> 
                     <img src="" alt="" class="pic">
@@ -38,14 +42,15 @@
                     <p><b>Habilidades: </b><span class="ability"></span></sp>
                 </div>        
             </div>
+
         </section>
         <footer>
-            <p>aqui va algo</p>
+            <p></p>
         </footer>
     
 
 
-    <script src="index.js"></script>
+    <script src="index_prueba.js"></script>
 
 </body>
 </html>

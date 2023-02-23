@@ -4,42 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./db.js"></script>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./style.css">
+    <title>Dragon Ball Z Wiki</title>
+    <link rel="stylesheet" href="style_prueba.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="db.js"></script>
 </head>
-<body>
-    <button id="mostrar-seccion">Mostrar sección</button>
-
-    <section class="lista-planetas">
-        <div class="contenedor">
-        <div class="contenedorBusqueda">
-                <input type="text" id="nombre">
-                <button id="buscar_btn" class="btn" onclick="buscar()"> Buscar</button>
-                <div id="resultado" cla></div>
+<body  class="container"> 
+        <nav class="contenedor_nav">
+            <div class="contenedorBusqueda">  
+                <input type="text" id="nombre" onkeypress="handle(event)" required>
+                <label class="texto">
+                    <span class="texto_busqueda">Busca tu personaje AQUI!</span>
+                </label>
             </div>
-        <div class="titulos" id="boxPrincipal">
-            
-            <h2 class="name"></h2>
-        </div>
-        
-        <div class="personajeDb" id="boxPrincipal">    
-            <img src="" alt="" class="pic">
-            <audio src="" class="sonido" autoplay></audio>
-                <p><b>Nombre:</b> <span class="name"></span></p>
-                <p><b>Raza: </b><span class="race"></span></p>
-                <p><b>Genero: </b><span class="gender"></span></p>
-                <p><b>Biografia: </b><span class="bio"></span></p>
-                <p><b>Salud: </b><span class="health"></span></p>
-                <p><b>Ataque: </b><span class="attack"></span></p>
-                <p><b>Defensa: </b><span class="defense"></span></p>
-                <p><b>Recuperacion de Ki: </b><span class="restore"></span></p>
-                <p><b>Habilidades: </b><span class="ability"></span></sp>
-        </div>
-    </div>
-    </section>
+            <div class="container_btn">
+                <button id="buscar_btn" class="btn" onclick="buscar()"> Buscar</button>
+            </div>
+        </nav>
 
-    <script src="./index.js"></script>
+
+        <section class="info_container" id="miSection">
+
+            <div class="personaje_db" id="boxPrincipal">  
+                <div class="imagen_personaje"> 
+                    <img src="" alt="" class="pic">
+                    <audio src="" class="sonido" autoplay></audio>
+                </div> 
+                <div class="info_general">
+                    <p><b>Nombre:</b> <span class="name"></span></p>
+                    <p><b>Raza: </b><span class="race"></span></p>
+                    <p><b>Genero: </b><span class="gender"></span></p>
+                    <p><b>Biografia: </b><span class="bio"></span></p>
+                    <p><b>Salud: </b><span class="health"></span></p>
+                    <p><b>Ataque: </b><span class="attack"></span></p>
+                    <p><b>Defensa: </b><span class="defense"></span></p>
+                    <p><b>Recuperacion de Ki: </b><span class="restore"></span></p>
+                    <p><b>Habilidades: </b><span class="ability"></span></sp>
+                </div>        
+            </div>
+
+        </section>
+        <footer>
+            <p></p>
+        </footer>
+    
+
+
+    <script src="index_prueba.js"></script>
+
 </body>
-</html> 
+</html>

@@ -1,207 +1,178 @@
-*{
+html {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+    font-size: 62.5%;  /** 1 REM = 10PX¨  *HAAACK* **/
+  }
+*, *:before, *:after {
+        box-sizing: inherit;
+  }
 
-body{
+  body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;  /** INTERLINIEADO **/
     background-image: url(./assets/fondo.jpg); 
-    font-family:Arial, Helvetica, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    row-gap: 1rem;
 }
 
-html{
-    font-size: 60%;
-}
 
-section{
-    display: none;
-}
+/* .container{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
 
-.contenedor{
-display: flex;
-flex-direction: column;
-align-items:center ;
-color: rgb(0, 0, 0);
-font:bold
+    height: 100vh;
+    height: 100vh;
+    width: 100vw;
+} */
 
+/* .search_container{
+    display: flex;
+    justify-content: center;
+} */
+
+
+/* .contenedorBusqueda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+} */
+
+.contenedor_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding-left: 3rem;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
 }
 
 .contenedorBusqueda{
-    display: flex;
-    flex-direction: column;
-}
-
-.contenedorBusqueda input{
-    margin: 5px 0 ;
-    height: 30px;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 5px;
-}
-.contenedorBusqueda button{
-    margin: 5px  0;
-    font-size: 15px;
-    width: 100px;
-    height: 30px;
-    align-self: center;
-    border-radius:5px ;
-}
-
-
-.lista-personaes{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 16px;
-
-
-}
-
-#nombre{
-    text-transform: lowercase;
-}
-
-.btn{
-    margin-bottom: 15px;
-}
-
-
-.titulo{
-    background-color:aliceblue;
-    font-size: 2rem;
-    width: 12rem;
-    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
     position: relative;
-    top: 30px;
-    color: rgba(210, 211, 186, 0.815);
-    font:bold
+    overflow: hidden;
+}
+.contenedorBusqueda input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: white;
+    padding-top: 2rem;
+    border: none;
+    outline:0rem;
+}
+
+.contenedorBusqueda .texto{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #380505;
+}
+
+.contenedorBusqueda .texto:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.contenedorBusqueda .texto_busqueda{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color:#380505;
+}
+.contenedorBusqueda input:focus + .texto .texto_busqueda,
+.contenedorBusqueda input:valid + .texto .texto_busqueda {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color:#2ecece;
+}
+.contenedorBusqueda input:focus + .texto:after,
+.contenedorBusqueda input:valid + .texto:after {
+    transform: translateX(0%);
+}
+/* .contenedorBusqueda #nombre{
+    margin-bottom: 2rem;
+} */
+
+.container_btn  .btn{
+    width: 15rem;
+
+}
+.container_btn  .btn:hover{
+    cursor: pointer;
 }
 
 
-.titulo h2{
+
+
+/**/
+section.info_container{
+    display: none;
+}
+
+.info_container{
     display: flex;
     justify-content: center;
-    border: 1px solid aqua;
-    border-radius: 5px;
-}
-.personajeDb{
-height: 650px;
-width: 450px;
-font-size: 13px;
-display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: space-between;
-padding-bottom: 15px;
-margin: 1px;
-padding: 10px;
+    width: 100vw;
+    height: 100%;
 }
 
-.personajeDb img{
-    align-self: center;
+.personaje_db{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 80%;
+    margin-left:  3rem;
+    background-color: rgba(232, 157, 19, 0.177);
+    border-radius: 1rem;
 }
 
-.planeta p{
-    padding: 0px;
-    margin: 0px;
+.imagen_personaje{
+    display: flex;
+    justify-content: center;
 }
-
-img{
+.imagen_personaje img{
     width: 15rem;
     height: 15rem;
 }
 
-#boxPrincipal{
-    background-color:  #65591649;
-    border-radius: 10px;
-    /* background-image: url(https://cdn.pixabay.com/photo/2016/02/28/02/27/mercury-1226433__340.jpg);  */
+.info_general{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    margin: 0;
+    gap: 0;
 }
-/*
-#venus {
-    background-color: #793203;
-    border-radius: 15px;
-    background-image: url(https://estaticos.muyinteresante.es/uploads/images/gallery/5f1832375cafe83edae8ae38/venus0.jpg);
-}
-
-#tierra{
-    background-color: #0b1c4f;
-    border-radius: 15px;
-    background-image: url(https://i.blogs.es/6788de/imagen-detalle/1366_2000.jpg);
+.info_general p{
+    margin: .5rem;
 }
 
-#marte{
-    background-color: #7e0c04;
-    border-radius: 15px;
-    background-image: url(https://cdn.pixabay.com/photo/2017/02/09/12/02/mars-2051747__340.png);
-}
-
-#jupiter{
-    background-color: #d0c9c2;
-    border-radius: 15px;
-    background-image:url(https://i.blogs.es/573811/eclipse-jupiter/1366_2000.jpg);
-}
-
-#saturno{
-    background-color: #935f6e;
-    border-radius: 15px;
-    background-image: url(https://cdn.pixabay.com/photo/2012/11/28/10/54/planet-67672__340.jpg);
-}
-
-#urano{
-    background-color: #9cbfc5;
-    border-radius: 15px;
-    background-image: url(https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2014/09/01/140901154302_urano_planeta_624x351_spl.jpg);
-}
-
-#neptuno{
-    background-color: #395697;
-    border-radius: 15px;
-    background-image: url(https://dam.ngenespanol.com/wp-content/uploads/2021/09/neptuno-en-oposicion.jpg);
-}
-
-
-
-#mercurio-t{
-    background-color:  #574c63;
-    
-}
-
-#venus-t{
-    background-color: #774422;
-
-}
-
-#tierra-t{
-    background-color: #1d294e;
-    
-}
-
-#marte-t{
-    background-color: #802b25;
- 
-}
-
-#jupiter-t{
-    background-color: #d0b79e;
-   
-}
-
-#saturno-t{
-    background-color: #953c55;
-    
-}
-
-#urano-t{
-    background-color: #66b6c4;
-
-}
-
-#neptuno-t{
-    Background-color: transparent;
-   
-}
-*/
+/************************************ */
