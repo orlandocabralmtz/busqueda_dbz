@@ -13,12 +13,13 @@ html {
     background-image: url(./assets/fondo.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
     row-gap: 1rem;
 }
 
@@ -46,6 +47,27 @@ html {
     margin: 0;
     padding: 0;
 } */
+
+.container_header{
+    display: flex;
+    flex-direction: column;
+}
+
+.msg_bienvenida{
+    color: #380505;
+    margin-left: 3rem;    
+}
+.msg_bienvenida span{
+    color: red;
+    font-weight: bolder;    
+}
+
+.lista_personajes ul{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    list-style: none;
+}
 
 .contenedor_nav{
     display: flex;
