@@ -17,6 +17,7 @@ function buscar(){
     //resultado.innerHTML = nombre.value;
     let personaje =     buscarPersonaje(nombre.value);   
     if (personaje != null){   
+    aparecer();
     document.querySelectorAll(".name",)[0].innerHTML = `${personaje.name}`;
     // document.querySelectorAll(".name",)[1].innerHTML = `${personaje.name}`;
     document.querySelectorAll(".race")[0].innerHTML = `${personaje.race}`;
